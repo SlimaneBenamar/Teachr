@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Image, Button} from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Image, Button, TouchableOpacity} from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 import PrendreButton from './Components/buttonP';
 import RetirerButton from './Components/buttonR';
@@ -115,6 +115,13 @@ export default class App extends React.Component {
       render() {
           return (
             <SafeAreaView style={styles.areaview_content}>
+            <View style={styles.header}>
+                <TouchableOpacity style={styles.button} onPress={()=>{}}>
+                  <Image source={require("./assets/back.png")}/>
+                </TouchableOpacity>
+              
+              <Text style={styles.header_text}>Teach'rs favoris</Text>
+            </View>
               <View style={styles.carousel_content}>
                   <Carousel
                     ref={ref => this.carousel = ref}
@@ -132,7 +139,8 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   areaview_content:{
     flex: 1,
-    paddingTop: 50,
+    flexDirection:'column',
+    justifyContent:'space-around'
   },
   main_container:{
     flexDirection:'row',
@@ -143,7 +151,20 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     height: 400,
     padding: 20,
+    marginTop:20,
     marginLeft: 25,
+  },
+  header:{
+    height:150,
+    justifyContent:'center',
+    backgroundColor:'#00bfff',
+  },
+  header_text:{
+    color:`#ffffff`,
+    fontWeight:'bold',
+    paddingLeft:15,
+    fontSize:25,
+    textAlign:'left',
   },
   images_container:{
     width:60,
