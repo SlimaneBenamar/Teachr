@@ -19,7 +19,7 @@ const styless = StyleSheet.create({
     textAlign:'center',
     borderColor:'#f08080',
     borderWidth:1,
-    marginTop:5,
+    marginTop:10,
   },
   buttonText:{
     color:'#f08080',

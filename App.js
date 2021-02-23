@@ -93,18 +93,18 @@ export default class App extends React.Component {
                   <Text style={styles.nom_container}>{item.nom}</Text>
                 </View>
                 <View style={styles.formation_container}>
-                  <Text style={{color:'gray', fontWeight:'bold',}}>Formation</Text>
+                  <Text style={{color:'#d3d3d3', fontWeight:'bold',}}>Formation</Text>
                   <Text style={styles.formation_text}>{item.formation}</Text>
                 </View>
               <View style={styles.description_container}>
-                <Text style={{color:'gray', fontWeight:'bold',}}>Description</Text>
+                <Text style={{color:'#d3d3d3', fontWeight:'bold',}}>Description</Text>
                 <Text style={styles.description_text}>{item.description}</Text>
               </View>
               <View>
                 <PrendreButton text="Prendre un cours avec ce Teach'r" onPress={()=>{}}/>
               </View>
               <View>
-                <RetirerButton text="Retirer ce Teachh'r de mes favoris" onPress={()=>{}}/>
+                <RetirerButton text="Retirer ce Teach'r de mes favoris" onPress={()=>{}}/>
               </View>
               </View>
             </View>
@@ -119,7 +119,7 @@ export default class App extends React.Component {
                 <TouchableOpacity style={styles.button} onPress={()=>{}}>
                   <Image source={require("./assets/back.png")}/>
                 </TouchableOpacity>
-              
+
               <Text style={styles.header_text}>Teach'rs favoris</Text>
             </View>
               <View style={styles.carousel_content}>
@@ -140,14 +140,14 @@ const styles = StyleSheet.create({
   areaview_content:{
     flex: 1,
     flexDirection:'column',
-    justifyContent:'space-around'
+    justifyContent:'space-around',
+
+
   },
   main_container:{
     flexDirection:'row',
-    elevation:3,
-    shadowOffset:{width:0, height:3},
+    elevation:1,
     shadowOpacity:0.5,
-    shadowRadius:5,
     borderRadius: 10,
     height: 400,
     padding: 20,
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
     marginLeft: 25,
   },
   header:{
-    height:150,
+    height:180,
     justifyContent:'center',
     backgroundColor:'#00bfff',
   },
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
     color:`#ffffff`,
     fontWeight:'bold',
     paddingLeft:15,
-    fontSize:25,
+    fontSize:30,
     textAlign:'left',
   },
   images_container:{
